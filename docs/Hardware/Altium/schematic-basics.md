@@ -4,9 +4,12 @@ After [setting up your project](../../Hardware/Altium/project-setup.md), you can
 
 ## Adding Symbols
 
-1. Choose a part from the [components library](../../Hardware/Altium/library.md).
+1. Choose a part from the components panel
+    <div style="text-align: center; margin-top: 30px;">
+        <img src="/../../Hardware/Altium/Images/components-panel.png" alt="Components Panel"  style="max-width: 100%; height: auto;"/>
+    </div>
 
-2. Right-click on the part and select **Place**. If the component has multiple parts, you will have to choose one.
+2. Right-click on the part and select **Place**. If the component has multiple parts, you will have to place each part individually. The component will cycle through parts A → ? and then go back to A again.
 
 3. The symbol will appear translucent. Position it by hovering the mouse over the desired position and click to place. Right-click or ++esc++ to cancel. After placing the symbol, rotate it by selecting it and pressing ++space++.
 
@@ -81,7 +84,7 @@ Connect a short bit of wire to the desired pin. Then, similar to placing the wir
 
 ### Port
 
-A port makes a connection between multiple sheets of a schematic. The name of the port on one sheet corresponds to the name of the port on the other sheet to which it connects. It is placed the same way as a wire or net label.
+A port makes a connection between multiple sheets of a schematic. The name of the port on one sheet corresponds to the name of the port on the other sheet to which it connects. It is placed the same way as a wire or net label. It is standard to only use net labels for local connections and ports for global connections across sheets.
 
 <div style="text-align: center; margin-top: 30px;">
     <img src="/../../Hardware/Altium/Images/port-label-1.png" alt="Port Label on Sheet 1"  style="max-width: 50%; height: auto;"/>
@@ -99,6 +102,10 @@ A power port specifically indicates a connection to a power or ground net.
 
 ---
 
+### Schematic Templates
+
+[Schematic templates](../../Hardware/Altium/schematic-templates.md) are used to format information about your schematic. The RIT Racing library has a standardized template that should be used for all designs.
+
 ## Validation
 
 Once the schematic is complete, it needs to be validated to check for any errors. Validation must be completed before generating the PCB layout.
@@ -109,7 +116,7 @@ To do this, go to **Project → Validate Project**.
     <img src="/../../Hardware/Altium/Images/validate-project.png" alt="Validate Project"  style="max-width: 100%; height: auto;"/>
 </div>
 
-Errors or warnings in the schematic design will appear in the **Messages** panel. Some can be ignored, but others indicate issues that need to be resolved. In this example, a wire has been removed to demonstrate the resulting errors that must be corrected:
+Errors or warnings in the schematic design will appear in the **Messages** panel. Some can be ignored, but others indicate issues that need to be resolved. Go through the errors carefully continuing to the PCB Design stage. In this example, a wire has been removed to demonstrate the resulting errors that must be corrected:
 
 <div style="text-align: center; margin-top: 30px;">
     <img src="/../../Hardware/Altium/Images/validate-project-warnings.png" alt="Validate Project Warnings"  style="max-width: 100%; height: auto;"/>
